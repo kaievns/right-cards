@@ -1,9 +1,16 @@
 Welcome
 =======
 
-Right cards is a game cards engine implemented with the RightJS framework.
+Right cards is a playing cards engine implemented with the RightJS framework.
 
 There's no any games logic, just a pure card deck, styles, etc.
+
+
+Images License
+==============
+
+The images in the project are mere integrated from the GNU project svg
+images and published under the terms of the the GNU GPL license v3.
 
 
 --
