@@ -5,6 +5,39 @@ Right cards is a playing cards engine implemented with the RightJS framework.
 
 There's no any games logic, just a pure card deck, styles, etc.
 
+Usage
+=========
+
+You should copy to your application the following files and directories
+
+ * build/right-cards.js
+ * src/styles.css
+ * images/
+
+If you change the images directory name or its relative path to the styles.css
+file, then you need to adjust the names in the stylesheet file.
+
+There are just two classes now
+
+DC.Deck
+  shuffle()
+  each(callback, scope)
+  pull()
+
+DC.Card(rank, suit, size)
+  open()
+  hide()
+  flip()
+  opened()
+  hidden()
+  setSize(size)
+  element
+  onClick(callback)
+  
+When you create a new deck it will automatically create a standard 52 cards
+deck without jockers. Jockers and other deck types are coming soon.
+
+
 
 Images License
 ==============
