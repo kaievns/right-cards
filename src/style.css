@@ -57,7 +57,7 @@ div.rc-big div.rc-card-picture {
 div.rc-big div.rc-face, div.rc-card div.rc-back {
   padding: 12px;
 }
-div.rc-back-decoration {
+div.rc-big div.rc-back-decoration {
   height: 246px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -80,7 +80,7 @@ div.rc-small div.rc-card-picture {
 div.rc-small div.rc-face, div.rc-card div.rc-back {
   padding: 6px;
 }
-div.rc-back-decoration {
+div.rc-small div.rc-back-decoration {
   height: 108px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -98,7 +98,7 @@ div.rc-tiny {
 div.rc-tiny div.rc-face, div.rc-card div.rc-back {
   padding: 6px;
 }
-div.rc-back-decoration {
+div.rc-tiny div.rc-back-decoration {
   height: 38px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;

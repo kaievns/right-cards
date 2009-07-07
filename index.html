@@ -6,14 +6,13 @@
     <link href="src/style.css" media="screen" rel="stylesheet" type="text/css" />
     
     <script type="text/javascript" src="lib/right.js"></script>
-    <script type="text/javascript" src="src/card.js"></script>
-    <script type="text/javascript" src="src/deck.js"></script>
+    <script type="text/javascript" src="src/init.js"></script>
     <script type="text/javascript">
       // <!--
       document.onReady(function() {
-        new Deck().each(function(card) {
-          $('game-container').insert(card.element);
-
+        new RC.Deck().each(function(card) {
+          card.element.insertTo('game-container');
+          card.onClick('flip');
         });
       });
       // -->

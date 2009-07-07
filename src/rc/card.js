@@ -3,8 +3,10 @@
  *
  * @copyright 2009 Nikolay V. Nemshilov aka St.
  */
-var Card = new Class({
+RC.Card = new Class(Observer, {
   extend: {
+    EVENTS: $w('click'),
+    
     SUITS: {
       spades:   2660,
       hearts:   2665,
@@ -49,6 +51,9 @@ var Card = new Class({
     this.build();
     
     this.setSize(size);
+    
+    this.$super();
+    this.element.on('click', this.click.bind(this));
   },
   
   open: function() {
@@ -65,10 +70,28 @@ var Card = new Class({
     return this;
   },
   
+  flip: function() {
+    if (this.opened()) {
+      this.hide();
+    } else {
+      this.open();
+    }
+    
+    return this;
+  },
+  
+  opened: function() {
+    return this.back.hidden();
+  },
+  
+  hidden: function() {
+    return this.face.hidden();
+  },
+  
   setSize: function(size) {
     this.element.removeClass('rc-tiny').removeClass('rc-small'
       ).removeClass('rc-normal').removeClass('rc-big'
-      ).addClass('rc-'+ (size || Card.DEFAULT_SIZE));
+      ).addClass('rc-'+ (size || RC.Card.DEFAULT_SIZE));
     
     return this;
   },
@@ -81,7 +104,7 @@ var Card = new Class({
     
     this.back.insert('<div class="rc-back-decoration"></div>');
     
-    var suit = '&#x'+Card.SUITS[this.suit]+';';
+    var suit = '&#x'+RC.Card.SUITS[this.suit]+';';
     
     this.face.insert('<div class="rc-face-name">'+this.rank+
       '<span class="rc-suit">'+suit+'</span></div>');
