@@ -1,0 +1,260 @@
+div.rc-card {
+  float: left;
+  position: relative;
+  border: 1px solid #BBB;
+  margin: 5pt;
+  cursor: default;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+div.rc-spades, div.rc-clubs {
+  color: black;
+}
+div.rc-hearts, div.rc-diamonds {
+  color: red;
+}
+
+/* default (normal) sizes */
+div.rc-card {
+  width: 140px;
+  height: 180px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  font-size: 30px;
+}
+div.rc-card div.rc-card-picture {
+  width: 50px;
+  height: 88px;
+  background-image: url('../images/cards/pictures-normal.png');
+}
+div.rc-card div.rc-face, div.rc-card div.rc-back {
+  padding: 8px;
+}
+div.rc-back-decoration {
+  background-color: brown;
+  height: 164px;
+  border: 1px solid #BBB;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-image: url('../images/cards/back-mask.png');
+}
+/* default (normal) sizes */
+
+/* big cards size */
+div.rc-big {
+  width: 220px;
+  height: 270px;
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  font-size: 44px;
+}
+div.rc-big div.rc-card-picture {
+  width: 80px;
+  height: 140px;
+  background-image: url('../images/cards/pictures-big.png');
+}
+div.rc-big div.rc-face, div.rc-card div.rc-back {
+  padding: 12px;
+}
+div.rc-back-decoration {
+  height: 246px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+/* big cards size */
+
+/* small cards size */
+div.rc-small {
+  width: 100px;
+  height: 120px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  font-size: 20px;
+}
+div.rc-small div.rc-card-picture {
+  width: 30px;
+  height: 53px;
+  background-image: url('../images/cards/pictures-small.png');
+}
+div.rc-small div.rc-face, div.rc-card div.rc-back {
+  padding: 6px;
+}
+div.rc-back-decoration {
+  height: 108px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+/* small cards size */
+
+/* tiny cards size */
+div.rc-tiny {
+  width: 40px;
+  height: 50px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  font-size: 24px;
+}
+div.rc-tiny div.rc-face, div.rc-card div.rc-back {
+  padding: 6px;
+}
+div.rc-back-decoration {
+  height: 38px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+div.rc-tiny div.rc-card-dot,
+div.rc-tiny div.rc-card-decor,
+div.rc-tiny div.rc-card-picture {
+  display: none;
+  background: none;
+}
+div.rc-tiny div.rc-face-name span.rc-suit {
+  font-size: 100% !important;
+  position: absolute !important;
+  margin-top: -0.1em !important;
+  margin-left: 10px;
+}
+/* tiny cards size */
+
+div.rc-card div.rc-face-name {
+  font-size: 80%;
+  letter-spacing: -2px;
+  position: absolute;
+  text-align: center;
+}
+div.rc-card div.rc-face-name span.rc-suit {
+  display: block;
+  position: relative;
+  font-size: 80%;
+  margin-top: -0.2em;
+}
+
+div.rc-card-dot {
+  position: absolute;
+  width: 1em;
+  text-align: center;
+  left: 40%;
+  right: 40%;
+}
+
+div.rc-rank-2 div.rc-card-dot-2,
+div.rc-rank-3 div.rc-card-dot-2,
+div.rc-rank-4 div.rc-card-dot-2, div.rc-rank-4 div.rc-card-dot-4,
+div.rc-rank-5 div.rc-card-dot-2, div.rc-rank-5 div.rc-card-dot-4,
+div.rc-rank-6 div.rc-card-dot-3, div.rc-rank-6 div.rc-card-dot-6,
+div.rc-rank-7 div.rc-card-dot-3, div.rc-rank-7 div.rc-card-dot-6,
+div.rc-rank-8 div.rc-card-dot-3, div.rc-rank-8 div.rc-card-dot-6,
+div.rc-rank-9 div.rc-card-dot-4, div.rc-rank-9 div.rc-card-dot-8,
+div.rc-rank-10 div.rc-card-dot-4, div.rc-rank-10 div.rc-card-dot-8 {
+  bottom: 0;
+}
+
+div.rc-rank-4 div.rc-card-dot-1, div.rc-rank-4 div.rc-card-dot-2,
+div.rc-rank-5 div.rc-card-dot-1, div.rc-rank-5 div.rc-card-dot-2,
+div.rc-rank-6 div.rc-card-dot-1, div.rc-rank-6 div.rc-card-dot-2, div.rc-rank-6 div.rc-card-dot-3,
+div.rc-rank-7 div.rc-card-dot-1, div.rc-rank-7 div.rc-card-dot-2, div.rc-rank-7 div.rc-card-dot-3,
+div.rc-rank-8 div.rc-card-dot-1, div.rc-rank-8 div.rc-card-dot-2, div.rc-rank-8 div.rc-card-dot-3,
+div.rc-rank-9 div.rc-card-dot-1, div.rc-rank-9 div.rc-card-dot-2, div.rc-rank-9 div.rc-card-dot-3, div.rc-rank-9 div.rc-card-dot-4,
+div.rc-rank-10 div.rc-card-dot-1, div.rc-rank-10 div.rc-card-dot-2, div.rc-rank-10 div.rc-card-dot-3, div.rc-rank-10 div.rc-card-dot-4 {
+  left: 22%;
+  right: auto;
+}
+
+div.rc-rank-4 div.rc-card-dot-3, div.rc-rank-4 div.rc-card-dot-4,
+div.rc-rank-5 div.rc-card-dot-3, div.rc-rank-5 div.rc-card-dot-4,
+div.rc-rank-6 div.rc-card-dot-4, div.rc-rank-6 div.rc-card-dot-5, div.rc-rank-6 div.rc-card-dot-6,
+div.rc-rank-7 div.rc-card-dot-4, div.rc-rank-7 div.rc-card-dot-5, div.rc-rank-7 div.rc-card-dot-6,
+div.rc-rank-8 div.rc-card-dot-4, div.rc-rank-8 div.rc-card-dot-5, div.rc-rank-8 div.rc-card-dot-6,
+div.rc-rank-9 div.rc-card-dot-5, div.rc-rank-9 div.rc-card-dot-6, div.rc-rank-9 div.rc-card-dot-7, div.rc-rank-9 div.rc-card-dot-8,
+div.rc-rank-10 div.rc-card-dot-5, div.rc-rank-10 div.rc-card-dot-6, div.rc-rank-10 div.rc-card-dot-7, div.rc-rank-10 div.rc-card-dot-8 {
+  right: 22%;
+  left: auto;
+}
+
+div.rc-rank-3 div.rc-card-dot-3,
+div.rc-rank-5 div.rc-card-dot-5,
+div.rc-rank-6 div.rc-card-dot-2, div.rc-rank-6 div.rc-card-dot-5, 
+div.rc-rank-7 div.rc-card-dot-2, div.rc-rank-7 div.rc-card-dot-5, 
+div.rc-rank-8 div.rc-card-dot-2, div.rc-rank-8 div.rc-card-dot-5, 
+div.rc-rank-9 div.rc-card-dot-9 {
+  top: 44%; bottom: 44%;
+}
+
+div.rc-rank-7 div.rc-card-dot-7,
+div.rc-rank-8 div.rc-card-dot-7 {
+  top: 25%;
+}
+div.rc-rank-8 div.rc-card-dot-8 {
+  bottom: 20%;
+}
+
+div.rc-rank-9 div.rc-card-dot-2, div.rc-rank-9 div.rc-card-dot-6,
+div.rc-rank-10 div.rc-card-dot-2, div.rc-rank-10 div.rc-card-dot-6 {
+  top: 30%;
+}
+
+div.rc-rank-9 div.rc-card-dot-3, div.rc-rank-9 div.rc-card-dot-7,
+div.rc-rank-10 div.rc-card-dot-3, div.rc-rank-10 div.rc-card-dot-7 {
+  bottom: 25%;
+}
+
+div.rc-rank-10 div.rc-card-dot-9, div.rc-rank-10 div.rc-card-dot-9 {
+  top: 20%;
+}
+div.rc-rank-10 div.rc-card-dot-10, div.rc-rank-10 div.rc-card-dot-10 {
+  bottom: 15%;
+}
+
+
+div.rc-card-decor {
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  left: 20%;
+  right: 20%;
+  top: 15%;
+  bottom: 15%;
+  text-align: center;
+  border: 1px solid #CCC;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+}
+
+div.rc-spades div.rc-card-decor, div.rc-clubs div.rc-card-decor {
+  background-color: #EEE;
+}
+div.rc-hearts div.rc-card-decor, div.rc-diamonds div.rc-card-decor {
+  background-color: #FFE4E4;
+}
+
+div.rc-card-picture {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 20%;
+  right: 20%;
+}
+
+div.rc-rank-J.rc-spades   div.rc-card-picture { background-position: 100% 0%; }
+div.rc-rank-J.rc-hearts   div.rc-card-picture { background-position: 200% 0%; }
+div.rc-rank-J.rc-diamonds div.rc-card-picture { background-position: 300% 0%; }
+                                      
+div.rc-rank-Q             div.rc-card-picture { background-position: 0%   -100%; }
+div.rc-rank-Q.rc-spades   div.rc-card-picture { background-position: 100% -100%; }
+div.rc-rank-Q.rc-hearts   div.rc-card-picture { background-position: 200% -100%; }
+div.rc-rank-Q.rc-diamonds div.rc-card-picture { background-position: 300% -100%; }
+                                      
+div.rc-rank-K             div.rc-card-picture { background-position: 0%   -200%; }
+div.rc-rank-K.rc-spades   div.rc-card-picture { background-position: 100% -200%; }
+div.rc-rank-K.rc-hearts   div.rc-card-picture { background-position: 200% -200%; }
+div.rc-rank-K.rc-diamonds div.rc-card-picture { background-position: 300% -200%; }
+
+div.rc-rank-A div.rc-card-picture {
+  background-image: none;
+  font-size: 270%;
+  width: 100%;
+  line-height: 125%;
+  left: 0;
+  right: 0;
+}

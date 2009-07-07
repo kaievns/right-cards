@@ -1,10 +1,15 @@
+/**
+ * Represents a single card unit
+ *
+ * @copyright 2009 Nikolay V. Nemshilov aka St.
+ */
 var Card = new Class({
   extend: {
     SUITS: {
-      spades:   2664 2660,
-      hearts:   2661 2665,
-      diamonds: 2662 2666
-      clubs:    2667 2663
+      spades:   2660,
+      hearts:   2665,
+      diamonds: 2666,
+      clubs:    2663
     },
     
     RANKS: {
@@ -26,9 +31,11 @@ var Card = new Class({
     SIZES: [
       'tiny',
       'small',
-      'medium',
+      'normal',
       'big'
-    ]
+    ],
+    
+    DEFAULT_SIZE: 'normal'
   },
   
   suit: null,
@@ -38,7 +45,56 @@ var Card = new Class({
   initialize: function(rank, suit, size) {
     this.rank = rank;
     this.suit = suit;
-    this.size = size;
+    
+    this.build();
+    
+    this.setSize(size);
+  },
+  
+  open: function() {
+    this.back.hide();
+    this.face.show();
+    
+    return this;
+  },
+  
+  hide: function() {
+    this.face.hide();
+    this.back.show();
+    
+    return this;
+  },
+  
+  setSize: function(size) {
+    this.element.removeClass('rc-tiny').removeClass('rc-small'
+      ).removeClass('rc-normal').removeClass('rc-big'
+      ).addClass('rc-'+ (size || Card.DEFAULT_SIZE));
+    
+    return this;
+  },
+  
+  build: function() {
+    this.element = $E('div', {'class': 'rc-card rc-rank-'+this.rank+' rc-'+this.suit});
+    
+    this.back = $E('div', {'class': 'rc-back'}).insertTo(this.element).hide();
+    this.face = $E('div', {'class': 'rc-face'}).insertTo(this.element);
+    
+    this.back.insert('<div class="rc-back-decoration"></div>');
+    
+    var suit = '&#x'+Card.SUITS[this.suit]+';';
+    
+    this.face.insert('<div class="rc-face-name">'+this.rank+
+      '<span class="rc-suit">'+suit+'</span></div>');
+    
+    if (this.rank == 'A') {
+      this.face.insert('<div class="rc-card-decor"><div class="rc-card-picture">'+suit+'</div></div>');
+    } else if (this.rank.match(/\d+/)) {
+      this.rank.toInt().times(function(i) {
+        this.face.insert('<div class="rc-card-dot rc-card-dot-'+(i+1)+'">'+suit+'</div>');
+      }, this);
+    } else {
+      this.face.insert('<div class="rc-card-decor"><div class="rc-card-picture"></div></div>');
+    }
   }
   
 });
