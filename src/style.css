@@ -4,7 +4,7 @@ div.rc-card {
   border: 1px solid #BBB;
   margin: 5pt;
   cursor: default;
-  font-family: Helvetica;
+  font-family: Arial;
   text-align: center;
 }
 
@@ -121,6 +121,7 @@ div.rc-card div.rc-face-name {
   font-size: 80%;
   letter-spacing: -2px;
   position: absolute;
+  float: left;
   text-align: center;
 }
 div.rc-card div.rc-face-name span.rc-suit {
