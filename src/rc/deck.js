@@ -25,6 +25,6 @@ RC.Deck = new Class({
   },
   
   pull: function() {
-    return this.cards.pull();
+    return this.cards.pop();
   }
 });

@@ -54,7 +54,7 @@ div.rc-big div.rc-card-picture {
   height: 140px;
   background-image: url('../images/cards/pictures-big.png');
 }
-div.rc-big div.rc-face, div.rc-card div.rc-back {
+div.rc-big div.rc-face, div.rc-big div.rc-back {
   padding: 12px;
 }
 div.rc-big div.rc-back-decoration {
@@ -77,7 +77,7 @@ div.rc-small div.rc-card-picture {
   height: 53px;
   background-image: url('../images/cards/pictures-small.png');
 }
-div.rc-small div.rc-face, div.rc-card div.rc-back {
+div.rc-small div.rc-face, div.rc-small div.rc-back {
   padding: 6px;
 }
 div.rc-small div.rc-back-decoration {
@@ -95,7 +95,7 @@ div.rc-tiny {
   -webkit-border-radius: 4px;
   font-size: 24px;
 }
-div.rc-tiny div.rc-face, div.rc-card div.rc-back {
+div.rc-tiny div.rc-face, div.rc-tiny div.rc-back {
   padding: 6px;
 }
 div.rc-tiny div.rc-back-decoration {
